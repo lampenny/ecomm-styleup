@@ -53,7 +53,7 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 120%;
 `;
 
 const InfoContainer = styled.div`
@@ -76,7 +76,7 @@ const Button = styled.button`
   padding: 10px;
   font-size: 20px;
   background-color: transparent;
-  cursor: pointer;
+  
 `;
 
 const Slider = () => {
@@ -103,7 +103,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button>SHOP NOW</Button>
             </InfoContainer>
           </Slide>
         ))}

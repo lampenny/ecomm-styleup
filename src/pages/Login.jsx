@@ -1,5 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import { login } from "../redux/apiCalls";
+import { mobile } from '../responsive';
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -50,24 +54,48 @@ const Button = styled.button`
   margin-bottom: 10px;
 `;
 
-const Link = styled.a`
+const LinkStyle = styled.a`
   margin: 5px 0px;
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
 `;
 
+// const Error = styled.span`
+//   color: red
+// `
+
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    login(dispatch, { username, password })
+  }
+
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Button>LOGIN</Button>
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Input
+            placeholder="username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <Input
+            placeholder="password"
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <Button onClick={handleClick}>
+            LOGIN
+          </Button>
+          <LinkStyle>FORGOT YOUR PASSWORD?</LinkStyle>
+          <Link to={'/register'} style={{ textDecoration: 'none' }}>
+            <LinkStyle>CREATE A NEW ACCOUNT</LinkStyle>
+          </Link>
         </Form>
       </Wrapper>
     </Container>

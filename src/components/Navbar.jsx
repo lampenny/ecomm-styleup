@@ -3,6 +3,8 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
   height: 60px;
@@ -49,8 +51,10 @@ const Center = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  color: black;
   ${mobile({ fontSize: "24px" })}
 `;
+
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -63,10 +67,13 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  color: black;
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
 const Navbar = () => {
+  const quantity = useSelector(state => state.cart.quantity);
+
   return (
     <Container>
       <Wrapper>
@@ -78,16 +85,24 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+        <Link to={`/`} style={{ textDecoration: 'none' }}>
+          <Logo>StyleUp</Logo>
+        </Link>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link to={`/register`} style={{ textDecoration: 'none' }}>
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to={`/login`} style={{ textDecoration: 'none' }}>
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to={`/cart`} style={{ textDecoration: 'none' }}>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />
             </Badge>
           </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

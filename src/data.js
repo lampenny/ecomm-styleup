@@ -1,24 +1,25 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
+      img: "https://i.pinimg.com/originals/c2/70/07/c270075a0c4409cb7e33ebf6938790ab.jpg",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      bg: "f5fafd"
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
+      img: "https://cdn.cliqueinc.com/posts/294535/london-autumn-fashion-trends-2021-294535-1627899323987-image.700x0c.jpg",
       title: "AUTUMN COLLECTION",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
+      bg: "fcf1ed"
+      
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
+      img: "https://cdn.shopify.com/s/files/1/1182/0608/products/The_UNDONE_Deiji_Studios_Loungewear_set_short_stripe_C_2c392dc9-aac0-4865-835c-15386abad541_1024x1024.jpg?v=1631597445",
       title: "LOUNGEWEAR LOVE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+      bg: "f5fafd"
     },
   ];
 
@@ -27,16 +28,19 @@ export const sliderItems = [
       id: 1,
       img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "SHIRT STYLE!",
+      cat: "coat"
     },
     {
       id: 2,
       img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       title: "LOUNGEWEAR LOVE",
+      cat: "women"
     },
     {
       id: 3,
       img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       title: "LIGHT JACKETS",
+      cat: "jeans"
     },
   ];
 
@@ -67,7 +71,7 @@ export const sliderItems = [
     },
     {
       id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+      img:"http://cdn.shopify.com/s/files/1/0533/2309/products/Jacket_Alpamayo_Brown_grande_9f2b512c-795c-40cf-b927-84461d0ff4a4_grande.png?v=1470870022",
     },
     {
       id:8,
