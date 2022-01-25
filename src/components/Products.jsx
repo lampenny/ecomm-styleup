@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Product from "./Product";
 
-import axiosInstance from '../../config';
+import axiosInstance from '../config';
 
 const Container = styled.div`
     padding: 20px;
