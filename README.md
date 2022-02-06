@@ -5,8 +5,11 @@ A full-stack shopping app built with React and Nodejs with Redux, Stripe, and JW
 
 # Overview
 🔨 Built using functional components, react hooks and styled using `styled-components`.
-🟣 `Redux` is used to store cart data so that it is updated instantaneously when users,
+
+🟣 `Redux` is used to store cart data so that it is updated instantaneously when users add to their cart.
+
 🗄 Data is stored on MongoDB connected to the back end via `mongoose`. Product data is fetched with `useEffect` hook.
+
 💻 Front end is deployed on Netlify and back end on Heroku.
 
 # To Do 💭
