@@ -14,3 +14,5 @@ A full-stack shopping app built with React and Nodejs with Redux, Stripe, and JW
 
 # To Do 💭
 👤 Allow users to register and sign in.
+
+🗑️ Allow users to Delete items from cart.
